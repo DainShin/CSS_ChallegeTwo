@@ -1,0 +1,80 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    line-height: 1.5;
+}
+
+section, p, h1, h2, h3, ul {
+    margin-bottom: 20px;
+}
+
+/* I added background image and confirmed the performance has no problem */
+body {
+    background-image: url("../image/bluepaint.jpg");
+    background-size: contain;
+    margin: 0;
+}
+
+ul {
+    list-style: none;
+}
+
+ul li:nth-child(odd) {
+    font-weight: bold;
+}
+
+/* I set the width to 80vw and added the background colour and border */
+.wrapper {
+    background-color: #F1F6F9;
+    background-size: cover;
+    width: 80vw;
+    margin: 0 auto;
+    padding: 30px 50px;
+    color: #333;
+    border: inset 8px #9BABB8;
+    text-align: center;
+}
+
+/* The header size will be 90% of the div.wrapper. I added "margin: 0 auto" in the div.wrapper to set the header center */
+header {
+    width: 90%;
+    margin: 0 auto; /* center */
+    background-color: #0F2F4F;
+    color: #EEEEEE;
+}
+
+/* I added the hover effect */
+header:hover {
+    filter: drop-shadow(5px 5px 10px #27374D);
+    background-color: #EEEEEE;
+    color: #0064CD;
+}
+
+/* I added flex to make the image responsive. */
+main section {
+    display: flex;
+    justify-content: center;
+}
+
+/* This photo-container contains the image and the container size will be the size of the image */
+.photo-container {
+    width: 300px;
+    height: 300px;
+}
+
+/* The image size will be changed according to the photo-container size */
+.photo-container img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Using filter function, I applied two different effects  */
+.photo-container img:hover {
+    filter: invert(75%) drop-shadow(12px 12px 12px rgba(0,0,0,.7));
+}
+
+#introduce {
+    color: initial;
+    white-space: pre-line;
+}
